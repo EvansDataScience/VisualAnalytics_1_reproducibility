@@ -187,6 +187,27 @@ plot(dataidx$FH~dataidx$RWB)
 
 The scatter plot is thought to be invented by  John Frederick W. Herschel according to this link: https://qz.com/1235712/the-origins-of-the-scatter-plot-data-visualizations-greatest-invention/
 
+\section{My Regression}\label{regre}
 
+This is a Regression in R:
+
+<<>>=
+regre1=lm(FH~RWB,data=dataidx)
+@
+
+This is another:
+
+<<>>=
+regre2=lm(FH~RWB+ONI,data=dataidx)
+@
+
+\clearpage
+These is a better summary, and for both:
+
+<<echo=FALSE,results=tex>>=
+stargazer(regre1,regre2,title = "Regression Models",label = 'regs')
+@
+
+I hope you like what you see in the Table \ref{regs}.
 
 \end{document}
